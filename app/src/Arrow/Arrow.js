@@ -21,3 +21,17 @@ var bob = {
   }
 }
 bob.printFriends();
+//rest parameter
+var fun = (...rest) => {console.log(rest.length)};
+fun();//0
+fun(1,2,3);//3
+fun(1,2);//2
+//default parameter
+var fun2 = (a = 1,b = 2) => {console.log(a+b)};
+fun2();
+fun2(2,3);
+//Destructuring
+var fun3 = ([a,b] = [1,2],{x:c} = {x: a+b}) => {console.log(a+b+c)};
+fun3();
+fun3([2,4]);
+fun3([2,4],{x:5});
