@@ -35,4 +35,19 @@ var adder = {
 console.log(adder.add(1));//2
 console.log(adder.addThruCall(1)); //2 not 3
 
+class Person2{
+  constructor(){
+    this.age = 0;
+
+    setInterval(function(){
+      this.age++; //this指向global对象
+    },1000);
+  }
+}
+
+var p2 = new Person2();
+
+setInterval(function(){
+  console.log(p2.age);
+},1000)
 
