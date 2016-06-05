@@ -3,7 +3,7 @@ ECMAScript 6学习
 ====
 参考：
 		英文：https://developer.mozilla.org/en-US/docs/Web/JavaScript
-		中文：https://developer.mozilla.org/en-US/docs/Web/JavaScript
+		中文：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 
 ## 一、Arrow function箭头函数
 	shorter functions and lexical this
