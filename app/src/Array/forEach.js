@@ -62,3 +62,34 @@ var copy = obj =>{
 var obj1 = {a:1,b:2};
 var obj2 = copy(obj1);
 console.log(obj2);
+
+/**forEach的过程中不能中断，如果想要检测数组中每个
+*元素是否都满足某个条件，推荐使用every方法
+*/
+
+var test1 = [12,10,5,130,440].every((ele,index) => 
+		{console.log(index);return ele >= 10});
+//0,1,2
+var test2 = [12,10,11, ,130,440].every((ele,index) => 
+		{console.log(index);return ele >= 10});
+//0,1,2,4,5
+console.log(test1);//false
+console.log(test2);//true
+
+/**同理如果有任意一个元素满足条件则返回true，可以用some*/
+
+var test3 = [1,10,5,9,6].some(ele => ele > 10);
+console.log("test3="+test3);
+var test4 = [1,10,15,9,6].some(ele => ele > 10);
+console.log("test4="+test4);
+
+//检测数组中是否存在某个元素
+var fruits = ['apple','banana','mango','guava'];
+
+var contains = (arr,value) => {
+	return arr.some(ele => ele === value);
+};
+
+console.log(contains(fruits,'kela'));
+console.log(contains(fruits,'banana'));
+
